@@ -1,7 +1,7 @@
 // $(":input").css("background-color", "blue");
 
 var todo_list = [
-    'portare il cane a spasso',
+    'portare il cane auy fhgcjyrdg furiyj hgdiythj gdc spasso',
     'apparecchiare',
     'cucinare',
     'fare auguri a Filippo'
@@ -17,30 +17,27 @@ for (var y = 0; y < todo_list.length; y++) {
     $('.todolist').append(template);
 }
 
-
-
 // aggiumgiamo elementi alla lista da input utente
-$('#aggiungi').keydown(function (evento){
-
+$('#add').keydown(function (evento){
+    
     if (evento.which == 13 ) {
         var testo = $(this).val();
         
         if(testo != "" ) {
             // copio il div, ci aggiungo i dati dentro e poi lo metto a video
-            var template = $('.template li').clone();
+            var template = $('.template ul li').clone();
             template.prepend(testo);
             $('.todolist').append(template);
             // 4. azzero l'input
             $(this).val("");
         }
     }
-})
+});
 
 
 // cancella gli elementi della lista al click
-$(document).on('click', 'todolist_delete', function() {
+$(document).on('click', '.todolist_delete', function() {
     $(this).parent().remove();
-
 });
 // function cancella() {
 //     $(this).parent().remove();
