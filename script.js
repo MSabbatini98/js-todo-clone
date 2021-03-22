@@ -18,6 +18,7 @@ for (var y = 0; y < todo_list.length; y++) {
 }
 
 // aggiumgiamo elementi alla lista da input utente
+// todo quando premo invio aggiorna l'intera pagina, rimettendo le cose cancellate e togliendo le cose aggiunte (instantaneamente)
 $('#add').keydown(function (evento){
     
     if (evento.which == 13 ) {
